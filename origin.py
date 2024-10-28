@@ -62,6 +62,8 @@ def complete_task(auth, task_id):
         result = response.json()
         if 'user' in result and 'stars' in result['user']:
             print('Task completed. Stars earned:', result['user']['stars'])
+            print('=========================')
+            print('Join Telegram Channel @dasarpemulung or https://t.me/dasarpemulung')
         else:
             print('Task completed, but "stars" information is missing in the response:', result)
     else:
@@ -234,6 +236,8 @@ def main():
     # Process each authorization token separately
     for auth in auth_tokens:
         print(f"\nProcessing tasks for auth token: {auth}")
+        print('=========================')
+        print('Join Telegram Channel @dasarpemulung or https://t.me/dasarpemulung')
 
         # Fetch and complete standard tasks
         tasks = get_tasks(auth)
